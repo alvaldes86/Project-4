@@ -14,9 +14,7 @@ namespace Project_4
         /// </summary>
         #region Fields
         private string _countyName;
-        private DateTime _date;
-        private int _newCasesX100;
-        private int _positivityRate;
+        
         #endregion
 
         /// <summary>

@@ -66,10 +66,10 @@ namespace Project_4
         /// <param name="e"></param>
         private void btnVaccinationsByAge_Click(object sender, EventArgs e)
         {
-           /* 
+           
             VaccinationsByAge vaccinationsByAge = new VaccinationsByAge();
             vaccinationsByAge.ShowDialog();
-           */
+           
         }
     }
 }
