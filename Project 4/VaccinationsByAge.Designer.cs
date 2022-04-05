@@ -45,6 +45,8 @@
             this.lblCountyName = new System.Windows.Forms.Label();
             this.txtCounty = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtVaccinations = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lstAgeRange = new System.Windows.Forms.ListBox();
             this.lblAgeRange = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -55,8 +57,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtVaccinations = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statesPictureBox2)).BeginInit();
@@ -248,6 +248,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Vaccinations by Age calculator";
             // 
+            // txtVaccinations
+            // 
+            this.txtVaccinations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVaccinations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
+            this.txtVaccinations.Location = new System.Drawing.Point(308, 184);
+            this.txtVaccinations.Name = "txtVaccinations";
+            this.txtVaccinations.Size = new System.Drawing.Size(184, 27);
+            this.txtVaccinations.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(80, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Number of Vaccinations";
+            // 
             // lstAgeRange
             // 
             this.lstAgeRange.FormattingEnabled = true;
@@ -265,6 +285,7 @@
             this.lstAgeRange.Name = "lstAgeRange";
             this.lstAgeRange.Size = new System.Drawing.Size(87, 164);
             this.lstAgeRange.TabIndex = 9;
+            this.lstAgeRange.SelectedIndexChanged += new System.EventHandler(this.lstAgeRange_SelectedIndexChanged);
             // 
             // lblAgeRange
             // 
@@ -361,26 +382,6 @@
             this.btnRemove.TabIndex = 18;
             this.btnRemove.Text = "&Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(80, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Number of Vaccinations";
-            // 
-            // txtVaccinations
-            // 
-            this.txtVaccinations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVaccinations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
-            this.txtVaccinations.Location = new System.Drawing.Point(308, 184);
-            this.txtVaccinations.Name = "txtVaccinations";
-            this.txtVaccinations.Size = new System.Drawing.Size(184, 27);
-            this.txtVaccinations.TabIndex = 11;
             // 
             // VaccinationsByAge
             // 
