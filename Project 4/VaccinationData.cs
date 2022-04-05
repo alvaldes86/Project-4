@@ -15,8 +15,10 @@ namespace Project_4
         /// </summary>
         string _countryName;
 
-        int[] ageRanges = new int[8];
-        int[] numberVaccinated = new int[8];
+        int[] _ageRanges = new int[8];
+        int[] _numberVaccinated = new int[8];
+
+        int _totalVaccinated;
 
         #endregion
 
@@ -34,14 +36,28 @@ namespace Project_4
 
         public int[] AgeRanges 
         {
-            get { return ageRanges; }
-            set { ageRanges = value; }
+            get { return _ageRanges; }
+            set { _ageRanges = value; }
         }
 
         public int[] NumberVaccinated
         {
-            get { return numberVaccinated; }
-            set { numberVaccinated = value; }
+            get { return _numberVaccinated; }
+            set { _numberVaccinated = value; }
+        }
+
+        public int TotalVaccinated
+        {
+            get
+            {
+                int counter = 0;
+                foreach(int total in _numberVaccinated)
+                {
+                    counter=+ total;
+                }
+
+                return counter;
+            }
         }
         #endregion
 
@@ -52,6 +68,13 @@ namespace Project_4
         public VaccinationData()
         {
 
+        }
+
+        public VaccinationData(string pCountyName, int[] pAgeRanges, int[] pNumberVaccinated)
+        {
+            CountryName = pCountyName;
+            AgeRanges = pAgeRanges;
+            NumberVaccinated = pNumberVaccinated;
         }
 
         ~VaccinationData()
@@ -67,7 +90,8 @@ namespace Project_4
         /// <returns></returns>
         public override string ToString()
         {
-            string message = "";
+            string message;
+            message = "The total number of vaccinations for all the range ages you selected is " + TotalVaccinated + ".";
 
 
             return message;

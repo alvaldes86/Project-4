@@ -40,16 +40,9 @@ namespace Project_4
 
                     VaccinationData newVaccinationData = new VaccinationData();
 
+                    lblOutputResult.Text = newVaccinationData.ToString();
 
-                    if(lstAgeRange.SelectedIndex != -1)
-                    {
-                        /*
-                        newVaccinationData.NumberVaccinated[0] = int.Parse(txtVaccinations.Text);
-                        lstNumberOfVaccinations.Items[0] = txtVaccinations.Text;
-                        */
-
-                        lstNumberOfVaccinations.Items[lstAgeRange.SelectedIndex] = int.Parse(txtVaccinations.Text);
-                    }
+                    
                 }
                 catch(Exception ex)
                 {
@@ -67,11 +60,6 @@ namespace Project_4
         {
             if (lstAgeRange.SelectedIndex != -1)
             {
-                /*
-                newVaccinationData.NumberVaccinated[0] = int.Parse(txtVaccinations.Text);
-                lstNumberOfVaccinations.Items[0] = txtVaccinations.Text;
-                */
-
                 lstNumberOfVaccinations.Items[lstAgeRange.SelectedIndex] = int.Parse(txtVaccinations.Text);
             }
         }
