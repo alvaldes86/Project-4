@@ -74,6 +74,7 @@
       <DependentUpon>Vaccinated.cs</DependentUpon>
     </Compile>
     <Compile Include="Vaccination.cs" />
+    <Compile Include="VaccinationData.cs" />
     <Compile Include="VaccinationsByAge.cs">
       <SubType>Form</SubType>
     </Compile>

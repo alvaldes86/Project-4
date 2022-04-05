@@ -16,5 +16,47 @@ namespace Project_4
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(txtCounty.Text.Trim() == String.Empty)
+            {
+                lblOutputResult.Text = "County name required";
+                txtCounty.SelectAll();
+                txtCounty.Focus();
+            }
+            else if(lstAgeRange.SelectedIndex == -1)
+            {
+                lblOutputResult.Text = "Select a valid age range";              
+                lstAgeRange.Focus();
+            }
+            else
+            {
+                try
+                {
+                    DateTime newDate = new DateTime();
+                    newDate = dateTimePicker1.Value;                   
+                    lblOutputResult.Text = newDate.ToString("MM/dd/yyyy");
+
+                    VaccinationData newVaccinationData = new VaccinationData();
+
+
+                    if(lstAgeRange.SelectedIndex == 0)
+                    {
+                        newVaccinationData.NumberVaccinated[0] = int.Parse(txtVaccinations.Text);
+                        lstNumberOfVaccinations.Items[0] = txtVaccinations.Text;
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);    
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

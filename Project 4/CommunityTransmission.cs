@@ -76,8 +76,6 @@ namespace Project_4
             if (txtCounty.Text.Trim() == String.Empty)
             {
                 lblOutputResult.Text = "County name required";
-
-                lblOutputResult.Text = "Country required";
                 txtCounty.SelectAll();
                 txtCounty.Focus();
             }
