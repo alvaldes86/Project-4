@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project_4
 {
-    public partial class myAppTracker : Form
+    public partial class MainForm : Form
     {
-        public myAppTracker()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -70,6 +70,32 @@ namespace Project_4
             VaccinationsByAge vaccinationsByAge = new VaccinationsByAge();
             vaccinationsByAge.ShowDialog();
            
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();           
+            aboutForm.ShowDialog();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            LoginForm loginForm = new LoginForm();            
+            loginForm.ShowDialog();
+
+            
+        }
+
+        private void menuStripLogout_Click(object sender, EventArgs e)
+        {
+            menuStripCOVIDData.Visible = false;
+            menuStripCountyDate.Visible = false;
+            menuStripLogout.Visible = false;
+            menuStripLogin.Visible = true;
+
+            MessageBox.Show("You are now logout");
+
         }
     }
 }

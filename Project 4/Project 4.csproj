@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CasesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,13 @@
     <Compile Include="CommunityTransmission.Designer.cs">
       <DependentUpon>CommunityTransmission.cs</DependentUpon>
     </Compile>
+    <Compile Include="County.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +80,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report.cs" />
     <Compile Include="Vaccinated.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,11 +95,17 @@
     <Compile Include="VaccinationsByAge.Designer.cs">
       <DependentUpon>VaccinationsByAge.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CasesForm.resx">
       <DependentUpon>CasesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommunityTransmission.resx">
       <DependentUpon>CommunityTransmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -11,30 +11,26 @@ namespace Project_4
 
         #region Fields
         /// <summary>
-        /// This class holds the fields _countryName, ...
+        /// This class holds the fields _countryName, _ageRange, _numberVaccinated
         /// </summary>
-        string _countryName;
-
-        int[] _ageRanges = new int[8];
-        int[] _numberVaccinated = new int[8];
-
-        int _totalVaccinated;
-
+        string _countyName;
+        string[] _ageRanges = new string[8];
+        int[] _numberVaccinated = new int[8];     
         #endregion
 
 
         /// <summary>
-        /// 
+        /// Properties of the class holds CountyName, Date, AgeRanges, NumberVaccinated, and readonly TotalVaccinated
         /// </summary>
         #region Properties
-        public string CountryName
+        public string CountyName
         {
-            get { return _countryName; }
-            set { _countryName = value.Trim(); }
+            get { return _countyName; }
+            set { _countyName = value.Trim(); }
         }
         public DateTime Date { get; set; }
 
-        public int[] AgeRanges 
+        public string[] AgeRanges 
         {
             get { return _ageRanges; }
             set { _ageRanges = value; }
@@ -50,13 +46,8 @@ namespace Project_4
         {
             get
             {
-                int counter = 0;
-                foreach(int total in _numberVaccinated)
-                {
-                    counter=+ total;
-                }
-
-                return counter;
+                int total = NumberVaccinated.Sum();
+                return total;
             }
         }
         #endregion
@@ -67,19 +58,23 @@ namespace Project_4
         /// </summary>
         public VaccinationData()
         {
-
+            
         }
 
-        public VaccinationData(string pCountyName, int[] pAgeRanges, int[] pNumberVaccinated)
+        public VaccinationData(string pCountyName, DateTime pDate, string[] pAgeRange, int[] pNumberVaccinated)
         {
-            CountryName = pCountyName;
-            AgeRanges = pAgeRanges;
+            CountyName = pCountyName;
+            Date = pDate;
+            AgeRanges = pAgeRange;
             NumberVaccinated = pNumberVaccinated;
+            
         }
 
         ~VaccinationData()
         {
-
+            _countyName = null;
+            _ageRanges = null;
+            _numberVaccinated = null;
         }
         #endregion
 
@@ -91,7 +86,8 @@ namespace Project_4
         public override string ToString()
         {
             string message;
-            message = "The total number of vaccinations for all the range ages you selected is " + TotalVaccinated + ".";
+            message = CountyName.ToUpper() + " has a total of " + TotalVaccinated + " of its population vaccinated." +
+                " Submitted on " + Date.ToString("MM/dd/yyyy");
 
 
             return message;

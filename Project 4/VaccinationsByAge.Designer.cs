@@ -229,9 +229,9 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.MidnightBlue;
             this.groupBox1.Controls.Add(this.txtVaccinations);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lstAgeRange);
             this.groupBox1.Controls.Add(this.lblAgeRange);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.lstNumberOfVaccinations);
             this.groupBox1.Controls.Add(this.lblNumberOfVaccinations);
@@ -252,7 +252,7 @@
             // 
             this.txtVaccinations.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVaccinations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(5)))));
-            this.txtVaccinations.Location = new System.Drawing.Point(308, 184);
+            this.txtVaccinations.Location = new System.Drawing.Point(308, 178);
             this.txtVaccinations.Name = "txtVaccinations";
             this.txtVaccinations.Size = new System.Drawing.Size(184, 27);
             this.txtVaccinations.TabIndex = 11;
@@ -262,7 +262,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(80, 191);
+            this.label1.Location = new System.Drawing.Point(80, 185);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 10;
@@ -320,7 +320,7 @@
             "0"});
             this.lstNumberOfVaccinations.Location = new System.Drawing.Point(308, 294);
             this.lstNumberOfVaccinations.Name = "lstNumberOfVaccinations";
-            this.lstNumberOfVaccinations.Size = new System.Drawing.Size(58, 164);
+            this.lstNumberOfVaccinations.Size = new System.Drawing.Size(88, 164);
             this.lstNumberOfVaccinations.TabIndex = 6;
             // 
             // lblSearch
@@ -373,6 +373,7 @@
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "&Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnRemove
             // 
